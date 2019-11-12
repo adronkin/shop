@@ -1,0 +1,33 @@
+{% load static %}
+
+    <div class="products  padding_site">
+
+        {% include 'mainapp/includes/inc__product_menu.html' %}
+
+        <div class="product_mini__pictures">
+            {% for product in category_products %}
+                    <a href="{% url 'main:product' product.pk %}">
+                        <img class="mini__pictures_item" src="/media/{{ product.image }}"
+                             alt="{{ product.short_desc }}">
+                    </a>
+            {% endfor %}
+        </div>
+
+        <div class="product_mini__refresh">
+            {% if category_products.has_previous %}
+                <a href="{% url 'main:category_paginator' category.pk category_products.previous_page_number %}"
+                   class="paginator">
+                   <
+                </a>
+            {% endif %}
+            <span class="paginator_text">
+            страница {{ category_products.number }} из {{ category_products.paginator.num_pages }}
+            </span>
+            {% if category_products.has_next %}
+                <a href="{% url 'main:category_paginator' category.pk category_products.next_page_number %}"
+                   class="paginator">
+                   >
+                </a>
+            {% endif %}
+        </div>
+    </div>

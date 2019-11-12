@@ -1,0 +1,19 @@
+{% load static %}
+
+<ul class="products_menu">
+    <li>
+        <a href="{% url 'main:category' 0 %}"
+           class="menu__link {% if request.resolver_match.kwargs.pk == '0' %} menu__link_active {% endif %}">
+            Все
+        </a>
+    </li>
+    {% for category in products_menu %}
+        <li>
+            <a href="{% url 'main:category' category.pk %}"
+               class="menu__link {% if request.resolver_match.kwargs.pk|add:0 == category.pk %} menu__link_active {% endif %}">
+                {{ category.name }}
+            </a>
+        </li>
+    {% endfor %}
+
+</ul>

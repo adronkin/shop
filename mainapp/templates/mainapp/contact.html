@@ -1,0 +1,36 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="contact_padding padding_site">
+
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+
+    </div>
+    <div class="slider__text">
+        <h2 class="slider__h2_v2">Contact Us</h2>
+    </div>
+
+    <div class="adress padding_site">
+        {% for item in locations %}
+            <div class="adress_block">
+                <div class="adress_bloch_point"><img src="{% static 'images/point.png' %}" alt=""></div>
+                <h3 class="adress_bloch_h3">{{ item.city }}</h3>
+                <div class="adress_bloch_text">
+                    <div class="adress_block_text_format">
+                        <p class="adress_block_text_color">Phone:</p>
+                        {{ item.phone }}
+                    </div>
+                    <div class="adress_block_text_format">
+                        <p class="adress_block_text_color">Email:</p>
+                        <a class="adress_block_mail" href="#">{{ item.email }}</a>
+                    </div>
+                    <div class="adress_block_text_format">
+                        <p class="adress_block_text_color">Address:</p>
+                        <p class="adress_block_text_weighr">{{ item.address }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

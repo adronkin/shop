@@ -1,0 +1,86 @@
+{% load static %}
+
+<div class="header">
+    <a href="{% url 'main:index' %}"><img src="{% static 'images/228.png' %}" alt="logo"></a>
+    <ul class="menu">
+        <li>
+            <a href="{% url 'main:index' %}"
+               class="menu__link {% if request.resolver_match.url_name == 'index' %} menu__link_active {% endif %}">
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:category' 0 %}"
+               class="menu__link {% if request.resolver_match.url_name == 'interior_product' or request.resolver_match.url_name == 'interior_product_details' or request.resolver_match.url_name == 'category' %} menu__link_active {% endif %}">
+                Каталог
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:contact' %}"
+               class="menu__link {% if request.resolver_match.url_name == 'contact' %} menu__link_active {% endif %}">
+                Контакты
+            </a>
+        </li>
+        {% if user.is_authenticated %}
+            <li>
+                <div class="dropdown">
+                    <a href="" class="dropdown-toggle menu__link" data-toggle="dropdown">
+                        {{ user.first_name|default:'Пользователь' }}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{% url 'authapp:update' %}" class="menu__link">
+                                профиль
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'ordersapp:orders_list' %}" class="menu__link">
+                                заказы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+{#            <li>#}
+{#                <div class="dropdown">#}
+{#                    <a href="{% url 'authapp:update' %}" class="menu__link">#}
+{#                        {{ user.first_name|default:'Пользователь' }}#}
+{#                    </a>#}
+{#                </div>#}
+{#            </li>#}
+        {% endif %}
+        {% if user.is_superuser %}
+            <li>
+                <a href="{% url 'adminapp:index' %}" class="menu__link">
+                    Администрирование
+                </a>
+            </li>
+        {% endif %}
+        <li>
+            {% if user.is_authenticated %}
+                <a href="{% url 'authapp:logout' %}" class="menu__link">
+                    выход
+                </a>
+            {% else %}
+                <a href="{% url 'authapp:login' %}" class="menu__link">
+                    вход
+                </a>
+            {% endif %}
+        </li>
+        <li>
+            <a href="#"><img class="menu_search_img" src="{% static 'images/search-solid.svg' %}" alt=""></a>
+        </li>
+        <li>
+            <a href="{% url 'basket:index' %}" style="text-decoration:none;">
+                <img class="menu_search_img" src="{% static 'images/shopping-basket-solid.svg' %}" alt="basket">
+                {% if basket %}
+                    <span class="basket__link">
+                    {{ basket.0.total_coast|floatformat:0 }} руб
+                    ({{ basket.0.total_quantity }} шт)
+                </span>
+                {% endif %}
+            </a>
+        </li>
+    </ul>
+</div>

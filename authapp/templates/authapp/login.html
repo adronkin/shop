@@ -1,0 +1,26 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="h2 text-center head">
+        Вход в систему
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}">
+        {% endif %}
+        {{ form.as_p }}
+        <br>
+        <input class="form-control" type="submit" value="войти">
+    </form>
+
+    <a href="{% url 'auth:register' %}" class="btn btn-round form-control">
+        Зарегистрироваться
+    </a>
+    <a href="{% url 'social:begin' 'vk-oauth2' %}?next=/" class="btn btn-round form-control">
+        Вход через ВКонтакте
+    </a>
+
+{% endblock %}

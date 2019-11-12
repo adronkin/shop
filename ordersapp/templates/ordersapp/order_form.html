@@ -1,0 +1,64 @@
+{% extends "ordersapp/base.html" %}
+{% load static %}
+
+{% block content %}
+    {#сведения о заказе (номер, дата создания и изменения, статус, количество товаров, общая стоимость)#}
+    {% include 'ordersapp/includes/inc_order_summary.html' %}
+    <div class="order_form">
+        <form action="" method="post">
+            {% csrf_token %}
+            {#Форма создания самого заказа, при работе с CBV, рендерим ее при помощи метода «.as_p()​»​#}
+            {{ form.as_p }}
+            <table class="table">
+                {#Обязательно ​выводим служебную форму для набора форм элементов заказа:#}
+                {{ orderitems.management_form }}
+                {% for form in orderitems.forms %}
+                    {% if forloop.first %}
+                        <thead>
+                        <tr>
+                            {% for field in form.visible_fields %}
+                                {#Шаблон​ный тег «cycle​» ​позволяет для каждого из столбцов таблицы присвоить свой класс.#}
+                                <th class="{% cycle 'td1' 'td2' 'td3' 'td4' %} order formset_td">
+                                    {{ field.label|capfirst }}
+                                </th>
+                            {% endfor %}
+                        </tr>
+                        </thead>
+                    {% endif %}
+                    <tr class="formset_row">
+                        {% for field in form.visible_fields %}
+                            <td class="{% cycle 'td1' 'td2' 'td3' 'td4' %} order formset_td">
+                                {% if forloop.first %}
+                                    {#form​.hidden_fields - скрытые поля#}
+                                    {% for hidden in form.hidden_fields %}
+                                        {{ hidden }}
+                                    {% endfor %}
+                                {% endif %}
+                                {#Ошибки поля#}
+                                {{ field.errors.as_ul }}
+                                {% if field.name != 'price' %}
+                                    {{ field }}
+                                {% else %}
+                                    {% if field.value %} {#вывод цены как текстового поля#}
+                                        {#Для того, чтобы считать данные о ценах товаров, необходимо задать каждому #}
+                                        {#значению свой идентификатор. Это могут быть атрибуты «class» или «id​»​. Допустим #}
+                                        {#наши идентификаторы должны иметь вид - orderitems-<​номер​ элемента заказа>-price. #}
+                                        {#Используем для их генерации ​счетчик​ внешнего (parentloop) цикла #}
+                                        {#(по формам набора), начинающийся с нуля (counter0)#}
+                                        <span class="orderitems-{{ forloop.parentloop.counter0 }}-price">
+                                            {{ field.value }}
+                                        </span> руб
+                                    {% endif %}
+                                {% endif %}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+            <button type="submit" value="сохранить" class="btn btn-default btn-round form-control last">сохранить
+            </button>
+            {#действия на странице с заказом (совершение покупки, удаление, возврат к списку заказов, возврат на главную страницу)#}
+            {% include 'ordersapp/includes/inc_order_actions.html' %}
+        </form>
+    </div>
+{% endblock %}

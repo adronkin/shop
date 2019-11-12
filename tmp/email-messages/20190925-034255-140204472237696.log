@@ -1,0 +1,13 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyB1c2VyXzI=?=
+From: django@shop.local
+To: user_2@mail.ru
+Date: Wed, 25 Sep 2019 03:42:55 -0000
+Message-ID: <156938297575.11052.14820091501852884184@serv>
+
+Для подтверждения учетной записи пользователя user_2 на портале http://192.168.1.42 перейдите по ссылке: http://192.168.1.42/auth/verify/user_2@mail.ru/fe336bc9411599a90068ccaa08bda9c06dbaacd1/
+-------------------------------------------------------------------------------

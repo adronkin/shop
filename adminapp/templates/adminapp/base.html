@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+            {{ title|title }}
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style_admin.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/montserrat/montserrat.css' %}">
+    {% endblock %}
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+<div class="admin_container">
+    <div class="h2 text-center head">
+        Панель администратора
+    </div>
+    {% block menu %}
+        <div class="admin_menu">
+            <ul class="menu">
+                <li>
+                    <a href="{% url 'main:index' %}">на сайт</a>
+                </li>
+                <li>
+                    <a href="{% url 'myadmin:index' %}"
+                       class="{% if request.resolver_match.url_name == 'index' %} active {% endif %}">
+                        пользователи
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'myadmin:productcategory_list' %}"
+                    class="{% if request.resolver_match.url_name == 'productcategory_list' or productcategory.name %}active{% endif %}">
+                    категории{% if productcategory %}: <span>{{ productcategory.name }}</span>{% endif %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    {% endblock %}
+
+    {% block container %}
+    {% endblock %}
+
+</div>
+</body>
+</html>

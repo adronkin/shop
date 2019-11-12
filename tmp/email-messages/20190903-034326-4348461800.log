@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyB1c2VyXzJ2?=
+From: django@shop.local
+To: adr@mail.ru
+Date: Tue, 03 Sep 2019 03:43:26 -0000
+Message-ID: <156748220698.1223.13962688278132841953@MacBook-Air-Artem.local>
+
+Для подтверждения учетной записи пользователя user_2v на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/adr@mail.ru/12e904f64381da13fba598e379cb8830bb5e45c6/
+-------------------------------------------------------------------------------

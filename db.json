@@ -1,0 +1,669 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 6,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 6,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 6,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add product category",
+      "content_type": 7,
+      "codename": "add_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change product category",
+      "content_type": 7,
+      "codename": "change_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete product category",
+      "content_type": 7,
+      "codename": "delete_productcategory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 8,
+      "codename": "add_shopuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 8,
+      "codename": "change_shopuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 8,
+      "codename": "delete_shopuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add shop user profile",
+      "content_type": 9,
+      "codename": "add_shopuserprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change shop user profile",
+      "content_type": 9,
+      "codename": "change_shopuserprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete shop user profile",
+      "content_type": 9,
+      "codename": "delete_shopuserprofile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can add basket",
+      "content_type": 10,
+      "codename": "add_basket"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can change basket",
+      "content_type": 10,
+      "codename": "change_basket"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can delete basket",
+      "content_type": 10,
+      "codename": "delete_basket"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can add \u0437\u0430\u043a\u0430\u0437",
+      "content_type": 11,
+      "codename": "add_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can change \u0437\u0430\u043a\u0430\u0437",
+      "content_type": 11,
+      "codename": "change_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can delete \u0437\u0430\u043a\u0430\u0437",
+      "content_type": 11,
+      "codename": "delete_order"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can add order item",
+      "content_type": 12,
+      "codename": "add_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can change order item",
+      "content_type": 12,
+      "codename": "change_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can delete order item",
+      "content_type": 12,
+      "codename": "delete_orderitem"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add association",
+      "content_type": 13,
+      "codename": "add_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change association",
+      "content_type": 13,
+      "codename": "change_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete association",
+      "content_type": 13,
+      "codename": "delete_association"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can add code",
+      "content_type": 14,
+      "codename": "add_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can change code",
+      "content_type": 14,
+      "codename": "change_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can delete code",
+      "content_type": 14,
+      "codename": "delete_code"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can add nonce",
+      "content_type": 15,
+      "codename": "add_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can change nonce",
+      "content_type": 15,
+      "codename": "change_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can delete nonce",
+      "content_type": 15,
+      "codename": "delete_nonce"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can add user social auth",
+      "content_type": 16,
+      "codename": "add_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can change user social auth",
+      "content_type": 16,
+      "codename": "change_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can delete user social auth",
+      "content_type": 16,
+      "codename": "delete_usersocialauth"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add partial",
+      "content_type": 17,
+      "codename": "add_partial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change partial",
+      "content_type": 17,
+      "codename": "change_partial"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete partial",
+      "content_type": 17,
+      "codename": "delete_partial"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6vg8wtjhcw23gx168ndhsm7j5fwe7scn",
+    "fields": {
+      "session_data": "YzM4ZDdkMGFhMGUzYTEyOTg0MGE5MDdiM2U3ODcxYjJiZjZlNTkwYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYmM5MTA2NDdiNGFhMjNiNGRmOTk3YjkxMzJkNWRhNTNiODc4YmIzIn0=",
+      "expire_date": "2019-09-21T21:29:50.753Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "\u041d\u0430 1 \u043a\u043e\u043b\u044c\u0446\u043e",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043a\u0438 \u043d\u0430 1 \u043a\u043e\u043b\u044c\u0446\u043e",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "\u041d\u0430 2 \u043a\u043e\u043b\u044c\u0446\u0430",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043a\u0438 \u0434\u043b\u044f \u0434\u0432\u0443\u0445 \u043a\u043e\u043b\u0435\u0446",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "\u041d\u0430 3 \u043a\u043e\u043b\u044c\u0446\u0430",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043a\u0438 \u0434\u043b\u044f \u0442\u0440\u0435\u0445 \u043a\u043e\u043b\u0435\u0446",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "\u041e\u043a\u0442\u0430\u0433\u043e\u043d",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043a\u0438 \u0432\u043e\u0441\u044c\u043c\u0438\u0443\u0433\u043e\u043b\u044c\u043d\u043e\u0439 \u0444\u043e\u0440\u043c\u044b",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Vintage Rose",
+      "image": "product_images/product-31.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0440\u043e\u0437\u043e\u0432\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430 \u0441 \u0441\u0435\u0440\u043e-\u0431\u0435\u0436\u0435\u0432\u044b\u043c \u043e\u0442\u0442\u0435\u043d\u043a\u043e\u043c.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 1 \u043a\u043e\u043b\u044c\u0446\u0430 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 35\u043c\u043c*35\u043c\u043c*35\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f \u043a\u043e\u043b\u044c\u0446\u0430 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 7\u043c\u043c.",
+      "price": "1200",
+      "quantity": 14,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Pearl",
+      "image": "product_images/product-11_DzdPQD0.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0441\u0432\u0435\u0442\u043b\u043e-\u0441\u0435\u0440\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 2 \u043a\u043e\u043b\u0435\u0446 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 40\u043c\u043c*40\u043c\u043c*40\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f 2 \u043a\u043e\u043b\u0435\u0446 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 6\u043c\u043c.",
+      "price": "1800",
+      "quantity": 6,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "Pearl",
+      "image": "product_images/product-11_DzdPQD0.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0441\u0432\u0435\u0442\u043b\u043e-\u0441\u0435\u0440\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 1 \u043a\u043e\u043b\u044c\u0446\u0430 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 35\u043c\u043c*35\u043c\u043c*35\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f \u043a\u043e\u043b\u044c\u0446\u0430 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 7\u043c\u043c.",
+      "price": "1200",
+      "quantity": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "Creme Brulee",
+      "image": "product_images/product-21.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0442\u0435\u043f\u043b\u043e\u0433\u043e \u0441\u043b\u0438\u0432\u043e\u0447\u043d\u043e\u0433\u043e \u043e\u0442\u0442\u0435\u043d\u043a\u0430.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 1 \u043a\u043e\u043b\u044c\u0446\u0430 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 35\u043c\u043c*35\u043c\u043c*35\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f \u043a\u043e\u043b\u044c\u0446\u0430 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 7\u043c\u043c.",
+      "price": "1200",
+      "quantity": 3,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "name": "Pistachio",
+      "image": "product_images/product-41_RsxtARr.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0444\u0438\u0441\u0442\u0430\u0448\u043a\u043e\u0432\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 3 \u043a\u043e\u043b\u0435\u0446 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 50\u043c\u043c*35\u043c\u043c*35\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f 3 \u043a\u043e\u043b\u0435\u0446 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 4\u043c\u043c.",
+      "price": "2000",
+      "quantity": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "name": "Pistachio",
+      "image": "product_images/product-41_RsxtARr.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0444\u0438\u0441\u0442\u0430\u0448\u043a\u043e\u0432\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 1 \u043a\u043e\u043b\u044c\u0446\u0430 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 35\u043c\u043c*35\u043c\u043c*35\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f \u043a\u043e\u043b\u044c\u0446\u0430 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 7\u043c\u043c.",
+      "price": "1200",
+      "quantity": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 7,
+    "fields": {
+      "category": 4,
+      "name": "Lavender",
+      "image": "product_images/product-5.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u043d\u0435\u0436\u043d\u043e\u0433\u043e \u043b\u0438\u043b\u043e\u0432\u043e\u0433\u043e \u0446\u0432\u0435\u0442\u0430 \u0441 \u0441\u0435\u0440\u044b\u043c \u043e\u0442\u0442\u0435\u043d\u043a\u043e\u043c.",
+      "description": "",
+      "price": "3000",
+      "quantity": 4,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 8,
+    "fields": {
+      "category": 1,
+      "name": "Azure",
+      "image": "product_images/product-6.jpg",
+      "short_desc": "\u0411\u0430\u0440\u0445\u0430\u0442\u043d\u0430\u044f \u043a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u044f\u0440\u043a\u043e-\u0441\u0438\u043d\u0435\u0433\u043e \u0446\u0432\u0435\u0442\u0430.",
+      "description": "\u041a\u043e\u0440\u043e\u0431\u043e\u0447\u043a\u0430 \u0434\u043b\u044f 1 \u043a\u043e\u043b\u044c\u0446\u0430 \u0438\u043c\u0435\u0435\u0442 \u0440\u0430\u0437\u043c\u0435\u0440 35\u043c\u043c*35\u043c\u043c*35\u043c\u043c \u0438 \u043f\u043e\u0434\u0445\u043e\u0434\u0438\u0442 \u0434\u043b\u044f \u043a\u043e\u043b\u044c\u0446\u0430 \u0434\u0438\u0430\u043c\u0435\u0442\u0440\u043e\u043c \u0438 \u0432\u044b\u0441\u043e\u0442\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 25\u043c\u043c \u0438 \u0442\u043e\u043b\u0449\u0438\u043d\u043e\u0439 \u043d\u0435 \u0431\u043e\u043b\u0435\u0435 7\u043c\u043c.",
+      "price": "1200",
+      "quantity": 5,
+      "is_active": true
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$OPCSTjhsIUn2$k/DS3d7hU/F82i3HPrakMASc9tHDmnSRZgjzdJa6i4A=",
+      "last_login": "2019-09-07T21:29:50.744Z",
+      "is_superuser": true,
+      "username": "django",
+      "first_name": "",
+      "last_name": "",
+      "email": "django@shop.local",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2019-09-07T21:29:30.722Z",
+      "avatar": "",
+      "age": 31,
+      "activation_key": "",
+      "activation_key_expires": "2019-09-09T21:29:30.583Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "tagline": "",
+      "aboutMe": "",
+      "gender": ""
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created": "2019-09-07T21:30:08.084Z",
+      "updated": "2019-09-07T21:30:08.103Z",
+      "status": "FM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 6,
+      "quantity": 1
+    }
+  }
+]

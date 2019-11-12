@@ -1,0 +1,7 @@
+http://192.168.1.42/
+http://192.168.1.42/contact/
+http://192.168.1.42/category/0/
+http://192.168.1.42/category/1/
+http://192.168.1.42/category/2/
+http://192.168.1.42/category/3/
+http://192.168.1.42/category/4/

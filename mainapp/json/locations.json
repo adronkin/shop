@@ -1,0 +1,20 @@
+[
+    {
+        "city": "Moscow",
+        "phone": "+7-985-999-99-99",
+        "email": "email@email.com",
+        "address": "Moscow, Tverskaya str., 73"
+     },
+    {
+        "city": "Kazan",
+        "phone": "+7-915-111-99-99",
+        "email": "email@email.com",
+        "address": "Kazan, Lomonosov str., 45"
+    },
+    {
+        "city": "Volgograd",
+        "phone": "+7-917-555-99-99",
+        "email": "email@email.com",
+        "address": "Volgograd, Lenin str., 1"
+    }
+]

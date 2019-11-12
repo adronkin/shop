@@ -1,0 +1,64 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="interior_product_header padding_site">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+    </div>
+
+    <div class="interior_product_menu padding_site">
+
+        {% include 'mainapp/includes/inc__product_menu.html' %}
+
+    </div>
+
+    <div class="product padding_site">
+        <div class="product_fotos">
+            <div>
+                <img class="product_fotos_big" src="/media/{{ object.image }}" alt="{{ object.short_desc }}">
+            </div>
+            <div class="product_fotos_small">
+                <a href="#">
+                    <img class="fotos_small" src="/media/{{ object.image }}" alt="{{ object.short_desc }}">
+                </a>
+                <a href="#">
+                    <img class="fotos_small" src="/media/{{ object.image }}" alt="{{ object.short_desc }}">
+                </a>
+            </div>
+        </div>
+        <div class="product_text">
+            <div class="product_text__title">
+                <h2 class="product_text__h2">{{ object.name }}</h2>
+                <div class="product_text_price">{{ object.price|floatformat:0 }}<span class="little_text"> руб.</span>
+                </div>
+            </div>
+            <a href="{% url 'basket:add' object.pk %}" class="buttom_product_details">Добавить в корзину<img
+                    class="arrow_white" src="{% static 'images/arrow_31.png' %}" alt="arrow"></a>
+            <div class="product_text__description">
+                <p class="product_text_info">Остаток на складе: {{ object.quantity }}</p>
+                <p class="product_text_info">{{ object.short_desc }}</p>
+                <p class="product_text_info">{{ object.description }}</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="related_product padding_site">
+        <div class="mini__picture_menu">
+            <p class="mibi__pecture_text">Похожие товары</p>
+            <a href="{% url 'main:category' 0 %}" class="shop__product_explore"> посмотреть все <img
+                    src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+        </div>
+
+
+        <div class="mini__pictures_pictures">
+            {% for product in same_products %}
+                <a href="#">
+                    <img class="mini__pictures_item" src="/media/{{ product.image }}" alt="{{ product.name }}">
+                </a>
+            {% endfor %}
+        </div>
+
+
+    </div>
+{% endblock %}

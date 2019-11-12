@@ -1,0 +1,165 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="slider padding_site">
+
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+
+        <div class="slider__text">
+            <p class="slider__text_top">TRENDING</p>
+            <h2 class="slider__h2">Ring box</h2>
+            <p class="slider__text_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <a href="{% url 'main:category' 0 %}" class="button">В магазин<img class="arrow"
+                                                                               src="{% static 'images/arrow.png' %}"
+                                                                               alt="arrow"></a>
+        </div>
+        <div class="slider__paginatiom">
+            <a href="" class="slider__circle"></a>
+            <a href="" class="slider__circle slider__circle_active"></a>
+            <a href="" class="slider__circle"></a>
+        </div>
+    </div>
+
+    <div class="shop__product padding_site">
+        <div class="shop__product_menu">
+            <ul class="shop__menu">
+                <li><a href="#" class="shop__menulink shop__menulink_active">Featured</a></li>
+                <li><a href="#" class="shop__menulink">New</a></li>
+            </ul>
+            <a href="{% url 'main:category' 0 %}" class="shop__product_explore">посмотреть все <img
+                    src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+        </div>
+        <div class="shop__product_image">
+            <div class="product__content" style="background-image: url({% static 'images/product-1_172.jpg' %})">
+                <div class="product__box">
+                    <div class="product__content_image">
+                        <a href="#"><img class="button__arrow" src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+                        <h3 class="shop__product_header">Ring box</h3>
+                        <p class="shop__product_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product__content" style="background-image: url({% static 'images/product-2.jpg' %})">
+                <div class="product__box">
+                    <div class="product__content_image">
+                        <a href="#"><img class="button__arrow" src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+                        <h3 class="shop__product_header">Ring box</h3>
+                        <p class="shop__product_p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product__content" style="background-image: url({% static 'images/product-3.jpg' %})">
+                <div class="product__box">
+                    <div class="product__content_image">
+                        <a href="#"><img class="button__arrow" src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+                        <h3 class="shop__product_header">Ring box</h3>
+                        <p class="shop__product_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product__content" style="background-image: url({% static 'images/product-4.jpg' %})">
+                <div class="product__box">
+                    <div class="product__content_image">
+                        <a href="#"><img class="button__arrow" src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+                        <h3 class="shop__product_header">Ring box</h3>
+                        <p class="shop__product_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="two__product">
+        <div class="product__one">
+            <div class="two__product_text">
+                <p class="product__text_top">exclusive</p>
+                <h2 class="product__h2">Ring Box</h2>
+                <p class="product__text_info">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="{% url 'main:category' 0 %}" class="button">В магазин<img class="arrow"
+                                                                                   src="{% static 'images/arrow.png' %}"
+                                                                                   alt="arrow"></a>
+            </div>
+        </div>
+        <div class="product__two">
+            <div class="two__product_text">
+                <p class="product__text_top">exclusive</p>
+                <h2 class="product__h2">Ring box</h2>
+                <p class="product__text_info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="{% url 'main:category' 0 %}" class="button">В магазин<img class="arrow"
+                                                                                   src="{% static 'images/arrow.png' %}"
+                                                                                   alt="arrow"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mini__picture padding_site">
+        <div class="mini__picture_menu">
+            <p class="mibi__pecture_text">Trending Products</p>
+            <a href="{% url 'main:category' 0 %}" class="shop__product_explore"> посмотреть все <img
+                    src="{% static 'images/arrow.png' %}" alt="arrow"></a>
+        </div>
+        <div class="mini__pictures_pictures">
+            {% for product in products %}
+            <a href="{% url 'main:product' product.pk %}">
+                <img class="mini__pictures_item" src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    {# <div class="slider__two padding_site"> #}
+        {# <div class="slider__text"> #}
+            {# <p class="slider__two_text_top">Hot deal</p> #}
+            {# <h2 class="slider__h2">Fishnet Chair</h2> #}
+            {# <p class="slider__text_info">Seat and back with upholstery made of cold cure foam. Steel frame, available in #}
+                {# matt powder-coated black</p> #}
+            {# <a href="{% url 'main:category' 0 %}" class="button">В магазин<img class="arrow" #}
+                                                                               {# src="{% static 'images/arrow.png' %}" #}
+                                                                               {# alt="arrow"></a> #}
+        {# </div> #}
+        {# <div class="slider__paginatiom"> #}
+            {# <a href="" class="slider__circle"></a> #}
+            {# <a href="" class="slider__circle slider__circle_active"></a> #}
+            {# <a href="" class="slider__circle"></a> #}
+        {# </div> #}
+    {# </div> #}
+
+    {# <div class="five__picture padding_site"> #}
+        {# <div class="five__picture_one"> #}
+            {# <div class="slider__lext_little"> #}
+                {# <p class="product__text_top">exclusive</p> #}
+                {# <h2 class="product__h2">Fishnet Chair</h2> #}
+                {# <p class="product__text_info">Seat and back with upholstery made of cold cure foam. Steel frame, #}
+                    {# available in matt</p> #}
+                {# <a href="{% url 'main:category' 0 %}" class="button">В магазин<img class="arrow" #}
+                                                                                   {# src="{% static 'images/arrow.png' %}" #}
+                                                                                   {# alt="arrow"></a> #}
+            {# </div> #}
+        {# </div> #}
+        {# <div class="five__picture_four"> #}
+            {# <div class="five__picture_pictures"><img src="{% static 'images/product-2-sm.jpg' %}" alt="lamp"></div> #}
+            {# <div class="five__picture_pictures"><img src="{% static 'images/product-3-sm.jpg' %}" alt="sofa"></div> #}
+            {# <div class="five__picture_pictures"><img src="{% static 'images/product-4-sm.jpg' %}" alt="clock"></div> #}
+            {# <div class="five__picture_pictures"><img src="{% static 'images/product-5-sm.jpg' %}" alt="lamp"></div> #}
+        {# </div> #}
+    {# </div> #}
+
+    {# <div class="box__follow padding_site"> #}
+        {# <div class="follow__text"> #}
+            {# <p class="slider__text_mobile">mobile app</p> #}
+            {# <h2 class="slider__h2">Find. Follow. Favorite.</h2> #}
+            {# <p class="slider__text_mobile_info">Save your favorites and share your style.</p> #}
+            {# <div class="mobile__store"> #}
+                {# <a class="mobile__store_link" href="#"><img src="{% static 'images/app-store.jpg' %}" #}
+                                                            {# alt="app_store"></a> #}
+                {# <a class="mobile__store_link" href="#"><img src="{% static 'images/google-play.jpg' %}" #}
+                                                            {# alt="google_play"></a> #}
+            {# </div> #}
+        {# </div> #}
+    {# </div> #}
+{% endblock %}

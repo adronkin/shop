@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4INC/0L7Qu9GM0LfQvtCy0LDRgtC10LvRjyB1c2VyXzEzMg==?=
+From: django@shop.local
+To: qwerf@mail.ru
+Date: Mon, 02 Sep 2019 20:51:06 -0000
+Message-ID: <156745746661.1566.5684036686986966599@MacBook-Air-Artem.local>
+
+Для подтверждения учетной записи пользователя user_132 на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/qwerf@mail.ru/fdcdd98005046ffbbb4f2a026a4829470eebde1c/
+-------------------------------------------------------------------------------

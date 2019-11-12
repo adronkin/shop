@@ -1,0 +1,20 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+
+	<div class="contact_padding padding_site">
+
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+
+        <div class="product_slider__text">
+            <h2 class="slider__h2_product_sort">{{ category.name|title }}</h2>
+        </div>
+    </div>
+
+    <div class='details'>
+        {% include 'mainapp/includes/inc__products_list_content.html' %}
+    </div>
+
+    <div class="clr"></div>
+{% endblock %}

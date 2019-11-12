@@ -1,0 +1,23 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block menu %}
+{% endblock %}
+
+{% block container %}
+    <div class="new_category_form">
+        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class="form-control" type="submit" value="сохранить">
+        </form>
+{#        <a href="{% url 'myadmin:productcategory_products' object.category.pk %}"#}
+{#           class="btn btn-primary form-control last">#}
+{#            к списку продуктов#}
+{#        </a>#}
+        <a href="{% url 'myadmin:productcategory_products' request.resolver_match.kwargs.pk %}"
+           class="btn btn-primary form-control last">
+            к списку продуктов
+        </a>
+    </div>
+{% endblock %}

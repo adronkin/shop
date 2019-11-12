@@ -1,0 +1,5 @@
+run.sh
+**/migrations/
+**/__pycache__/
+.idea/
+django_venv/
